@@ -29,6 +29,7 @@ p {
 }
 
 .card {
+    overflow: hidden;
     max-width: 400px;
     width: 100%;
     margin: 30px auto;
@@ -37,19 +38,15 @@ p {
 
 .header {
     padding: 25px 15px 0 25px;
-    overflow: auto;
+    overflow: visible;
     background-image: url("https://images.unsplash.com/photo-1476433449480-bee06f97b7d6?dpr=1.25&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
     background-size: 205%;
     background-position: 0% 20%;
     font-weight: 300;
     color: #ffffff;
-
     -webkit-clip-path: url("#clip-shape");
     clip-path: url("#clip-shape");
-
 }
-
-
 
 .page-title {
     font-size: 1.2em;
@@ -58,7 +55,7 @@ p {
 }
 
 .person {
-    margin: 0 0 130px 0;
+    padding: 0 0 130px 0;
     display: flex;
 }
 
@@ -83,13 +80,199 @@ p {
     opacity: 0.7;
 }
 
+.content {
+    padding: 0 22px 0 32px;
+    font-weight: 400;
+}
+
+.trigger-wrapper {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    background-color: #ee376c;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    right: 20px;
+    top: -36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
 #trigger {
     display: none;
 }
 
-.content {
-    padding: 0 22px 0 32px;
-    font-weight: 400;
+.menu-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #ee376c;
+}
+
+.menu-wrapper {
+    transition: all 200ms ease-out;
+}
+
+.trigger-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.trigger-label .line {
+    border-top: 2px solid #ffffff;
+    padding-bottom: 6px;
+    transition: all 200ms ease-out;
+}
+
+.trigger-label .line:nth-child(1) {
+    width: 24px;
+}
+
+.trigger-label .line:nth-child(2) {
+    width: 13px;
+}
+
+.trigger-label .line:nth-child(3) {
+    width: 5px;
+    padding-bottom: 0px;
+}
+
+
+/*HOVER MENU*/
+
+.menu:hover .line:nth-child(1) {
+    transform: translateY(100%) rotate(-45deg);
+    padding-bottom: 0px;
+}
+
+.menu:hover .line:nth-child(2) {
+    width: 24px;
+    transform: rotate(45deg);
+    padding-bottom: 0px;
+}
+
+.menu:hover .line:nth-child(3) {
+    transform: translate(-100%);
+    width: 0;
+}
+
+.menu:hover .trigger-label {
+    background-color: #ce3d68;
+    cursor: pointer;
+}
+
+.menu:hover .menu-wrapper {
+    width: 216px;
+    height: 216px;
+}
+
+/*HOVER ELEMENTS*/
+
+.hover-menu-button {
+    display: none;
+    position: absolute;
+    border: solid 1px #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+}
+
+.menu:hover .hover-menu-button {
+    animation-name: opacityAnimation;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+    display: flex;
+}
+
+.hover-menu-button .line2 {
+    border-top: 2px solid #ffffff;
+}
+
+@keyframes opacityAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*Cerculet Buton 1*/
+
+.button1 {
+    transform: translate(0px, -65px);
+}
+
+.button1 .line2:nth-child(1) {
+    width: 6px;
+    transform: rotate(45deg) translate(1px,6px);
+}
+
+.button1 .line2:nth-child(2) {
+    width: 13px;
+    transform: rotate(-45deg) translate(2px, 2px);
+}
+
+/*Cerculet Buton 2*/
+
+.button2 {
+    transform: translate(-58px, -32px);
+}
+
+.button2 .line2:nth-child(1) {
+    width: 10px;
+    transform: rotate(-45deg) translate(1px,-2px);
+}
+
+.button2 .line2:nth-child(2) {
+    width: 7px;
+    transform: translate(0px, 0px);
+}
+
+.button2 .line2:nth-child(3) {
+    width: 10px;
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+/*Cerculet Buton 3*/
+
+.button3 {
+    transform: translate(-58px, 32px);
+}
+
+.button3 .line2:nth-child(1) {
+    width: 9px;
+    transform: rotate(90deg) translate(-3px,0px);
+}
+
+.button3 .line2:nth-child(2) {
+    width: 7px;
+    transform: translate(3px, 0px);
+}
+
+/*Cerculet Buton 4*/
+
+.button4 {
+    transform: translate(0px, 65px);
+}
+
+.button4 .line2:nth-child(1) {
+    width: 8px;
+    transform: rotate(90deg) translate(-1px,0px);
+}
+
+.button4 .line2:nth-child(2) {
+    width: 3px;
+    transform: rotate(90deg) translate(5px, 0px);
 }
 
 .task-title {

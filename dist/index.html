@@ -2,81 +2,98 @@
 <html>
 
 <head>
-	<title>Card</title>
-	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+    <title>Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
+                <polygon fill="#5a628a" points="0 0, 1 0, 1 1, 0 0.8" />
+            </clipPath>
+        </defs>
+    </svg>
+    <div class="card">
+        <div class="header">
+            <p class="page-title">Timeline</p>
+            <div class="person">
+                <img class="person__img img--round" src="../resources/avatar.jpg">
+                <div class="person-info">
+                    <p class="person-info__name">Ryan Barnes</p>
+                    <p class="person-info__title">Product Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="trigger-wrapper">
+            <div class="menu">
+                <input type="checkbox" class="trigger-checkbox" id="trigger">
+                <label for="trigger" class="trigger-label menu-circle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
 
-	<svg width="0" height="0">
-	  <defs>
-	    <clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
-	      <polygon fill="#5a628a" points="0 0, 1 0, 1 1, 0 0.8" />
-	    </clipPath>
-	  </defs>
-	</svg>
-
-	<div class="card">
-		<div class="header">
-			<input type="checkbox" class="trigger_checkbox" id="trigger">
-			<label for="trigger" class="trigger_label">
-				<div></div>
-				<div></div>
-				<div></div>
-			</label>
-			<p class="page-title">Timeline</p>
-			<div class="person">
-				<img class="person__img img--round" src="../resources/avatar.jpg">
-				<div class="person-info">
-					<p class="person-info__name">Ryan Barnes</p>
-					<p class="person-info__title">Product Designer</p>
-				</div>
-			</div>
-			<div class="menu-button">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
-		<div class="content">
-			<div class="task-title">
-				<h1 class="task-title__name">My Tasks</h1>
-				<p class="task-title__date">February 8, 2015</p>
-			</div>
-			<ul class="task-list">
-				<li class="task-list__item task">
-					<div class="task__group">
-						<p class="task__title">Catch up with Brian</p>
-						<p class="task__type">Mobile Project</p>
-					</div>
-					<p class="task__date">5pm</p>
-				</li>
-				<li class="task-list__item task">
-					<div class="task__group">
-						<p class="task__title">Make new icons</p>
-						<p class="task__type">Web App</p>
-					</div>
-					<p class="task__date">3pm</p>
-				</li>
-				<li class="task-list__item task">
-					<div class="task__group">
-						<p class="task__title">Design explorations</p>
-						<p class="task__type">Company Website</p>
-					</div>
-					<p class="task__date">2pm</p>
-				</li>
-				<li class="task-list__item task">
-					<div class="task__group">
-						<p class="task__title">Lunch with Mary</p>
-						<p class="task__type">Grill House</p>
-					</div>
-					<p class="task__date">12pm</p>
-				</li>
-			</div>
-		</div>
-	</div>
-
-
+                    <div class="hover-menu-button button1">
+                        <div class="line2"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <div class="hover-menu-button button2">
+                        <div class="line2"></div>
+                        <div class="line2"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <div class="hover-menu-button button3">
+                        <div class="line2"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <div class="hover-menu-button button4">
+                        <div class="line2"></div>
+                        <div class="line2"></div>
+                    </div>
+                    
+                </label>
+                <div class="menu-wrapper menu-circle">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="task-title">
+                <h1 class="task-title__name">My Tasks</h1>
+                <p class="task-title__date">February 8, 2015</p>
+            </div>
+            <ul class="task-list">
+                <li class="task-list__item task">
+                    <div class="task__group">
+                        <p class="task__title">Catch up with Brian</p>
+                        <p class="task__type">Mobile Project</p>
+                    </div>
+                    <p class="task__date">5pm</p>
+                </li>
+                <li class="task-list__item task">
+                    <div class="task__group">
+                        <p class="task__title">Make new icons</p>
+                        <p class="task__type">Web App</p>
+                    </div>
+                    <p class="task__date">3pm</p>
+                </li>
+                <li class="task-list__item task">
+                    <div class="task__group">
+                        <p class="task__title">Design explorations</p>
+                        <p class="task__type">Company Website</p>
+                    </div>
+                    <p class="task__date">2pm</p>
+                </li>
+                <li class="task-list__item task">
+                    <div class="task__group">
+                        <p class="task__title">Lunch with Mary</p>
+                        <p class="task__type">Grill House</p>
+                    </div>
+                    <p class="task__date">12pm</p>
+                </li>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
